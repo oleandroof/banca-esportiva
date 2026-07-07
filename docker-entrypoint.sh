@@ -4,6 +4,9 @@ set -e
 service mariadb start
 sleep 3
 
+# Popular tabelas de timezone do MariaDB
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql 2>/dev/null || true
+
 mysql -u root <<EOF
 CREATE DATABASE IF NOT EXISTS bancaesportiva CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS 'bancauser'@'localhost' IDENTIFIED BY 'banca123';
