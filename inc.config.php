@@ -57,13 +57,13 @@ $config['modules'] = [
 
 $config['db'] = [
     'production' => [
-        'host' => getenv('DB_HOST') ?: 'localhost',
+        'host' => getenv('DB_HOST') ?: '127.0.0.1',
         'username' => getenv('DB_USER') ?: 'bancauser',
         'password' => getenv('DB_PASS') ?: 'banca123',
         'database' => getenv('DB_NAME') ?: 'bancaesportiva',
     ],
     'localhost' => [
-        'host' => 'localhost',
+        'host' => '127.0.0.1',
         'username' => 'bancauser',
         'password' => 'banca123',
         'database' => 'bancaesportiva',

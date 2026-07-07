@@ -1,7 +1,7 @@
 <?php
 ini_set('memory_limit', '-1');
 try{
-		$host = getenv('DB_HOST') ?: 'localhost';
+		$host = getenv('DB_HOST') ?: '127.0.0.1';
 		$dbname = getenv('DB_NAME') ?: 'bancaesportiva';
 		$user = getenv('DB_USER') ?: 'bancauser';
 		$pass = getenv('DB_PASS') ?: 'banca123';
