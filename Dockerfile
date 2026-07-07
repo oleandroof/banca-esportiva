@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 
+RUN echo "display_errors = On\nerror_reporting = E_ALL\nlog_errors = On\nerror_log = /dev/stderr" > /usr/local/etc/php/conf.d/debug-errors.ini
+
 RUN echo '<Directory /var/www/html>\n    AllowOverride All\n    Require all granted\n</Directory>' \
     >> /etc/apache2/apache2.conf
 
