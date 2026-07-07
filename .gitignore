@@ -3,3 +3,4 @@ _temp/session/*
 node_modules/
 .env
 reidoscript bancas.sql
+*.log
