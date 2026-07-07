@@ -1,0 +1,5 @@
+_temp/cache/*
+_temp/session/*
+node_modules/
+.env
+reidoscript bancas.sql
